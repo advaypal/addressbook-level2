@@ -24,6 +24,13 @@ public class NameTest {
     }
     
     @Test
+    public void checkifSimilarTestWithExtraSpace() throws IllegalValueException {
+        Name firstPersonName = new Name("John Doe");
+        Name secondPersonName = new Name("John  Doe");
+        assertTrue(firstPersonName.isSimilar(secondPersonName));
+    }
+    
+    @Test
     public void checkifSimilarTestWithSubstring() throws IllegalValueException {
         Name firstPersonName = new Name("John Doe");
         Name secondPersonName = new Name("John");
